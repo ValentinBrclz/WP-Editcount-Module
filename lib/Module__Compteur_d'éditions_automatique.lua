@@ -12,7 +12,7 @@ function p.getEditCount(frame)
 	local data = mw.loadData( 'Module:Compteur d\'éditions automatique/data' )
     -- Get the calling page root title
     local rtitle = mw.title.getCurrentTitle().rootText
-	-- Get the 1st level arguments
+	-- Get the 2nd level arguments
 	local args = frame:getParent().args
     -- If there is a value for the given user (args elseif via title), return it
     if data[args[1]] ~= nil then
