@@ -1,3 +1,10 @@
+--
+-- WP-Editcount-Module
+--
+-- Wikipedia FR Lua module that handles the current edit count of users
+-- Copyright (C) 2016
+-- <https://fr.wikipedia.org/w/index.php?title=Module:Compteur_d%27%C3%A9ditions_automatique&action=history>
+--
 local p = {}
 
 function p.getEditCount(frame)
