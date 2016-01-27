@@ -2,24 +2,32 @@
   "name": "wp-editcount-module",
   "version": "0.0.1",
   "description": "Wikipedia FR Lua module that handles the current edit count of users",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "Valentin Berclaz",
+  "license": "GPL-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ValentinBrclz/WP-Editcount-Module.git"
   },
+  "bugs": {
+    "url": "https://github.com/ValentinBrclz/WP-Editcount-Module/issues"
+  },
+  "homepage": "https://github.com/ValentinBrclz/WP-Editcount-Module#readme",
   "keywords": [
     "lua",
+    "module",
     "mediawiki",
     "wikipedia",
     "editcount"
   ],
-  "author": "Valentin Berclaz",
-  "license": "GPL-2.0",
-  "bugs": {
-    "url": "https://github.com/ValentinBrclz/WP-Editcount-Module/issues"
+  "engines": {
+    "node": ">=0.6"
   },
-  "homepage": "https://github.com/ValentinBrclz/WP-Editcount-Module#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-git-watch": "^0.1.0",
+    "gulp-mediawiki": "0.0.2"
+  }
 }
