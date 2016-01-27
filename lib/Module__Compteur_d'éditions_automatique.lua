@@ -7,6 +7,16 @@
 --
 local p = {}
 
+-- Get data in fromatnum format
+local function getFormattedData(frame, format, data)
+    -- If the user want the raw data
+    if format ~= nil then
+        return data
+    end
+    -- Otherwise format the number according to his settings
+    return frame:preprocess("{{formatnum:" .. data .. "}}")
+end
+
 function p.getEditCount(frame)
     -- Load and store the bot-updated data
     local data = mw.loadData( 'Module:Compteur d\'éditions automatique/data' )
@@ -16,17 +26,9 @@ function p.getEditCount(frame)
     local args = frame:getParent().args
     -- If there is a value for the given user (args elseif via title), return it
     if data[args[1]] ~= nil then
-        -- If the user want the raw data
-        if args['raw'] ~= nil then
-            return data[args[1]]
-        end
-        -- Otherwise format the number according to his settings
-    	return frame:preprocess("{{formatnum:" .. data[args[1]] .. "}}")
+        return getFormattedData(frame, args['raw'], data[args[1]])
     elseif data[rtitle] ~= nil then
-        if args['raw'] == nil then
-            return frame:preprocess("{{formatnum:" .. data[rtitle] .. "}}")
-        end
-        return data[rtitle]
+        return getFormattedData(frame, args['raw'], data[rtitle])
     end
     -- Elsewise just display a "?" until the bot get through it
     return "?"
