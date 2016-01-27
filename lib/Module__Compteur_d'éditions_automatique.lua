@@ -16,7 +16,7 @@ function p.getEditCount(frame)
     if data[args[1]] ~= nil then
         return data[args[1]]
     end
-	-- Elsewise just display a "?" until the bot get throught it
+	-- Elsewise just display a "?" until the bot get through it
 	return "?"
 end
 
