@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-git-watch": "^0.1.0",
     "gulp-mediawiki": "0.0.2"
   }
 }
