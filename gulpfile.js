@@ -17,3 +17,11 @@ gulp.task('default', function () {
 	return gulp.src('lib/*.lua')
 		.pipe(mediawiki(options));
 });
+
+gulp.task('git-watch', function() {
+	//noinspection JSUnresolvedFunction
+	gitWatch()
+		.on('change', function(newHash, oldHash) {
+			gulp.start('default');
+		});
+});
