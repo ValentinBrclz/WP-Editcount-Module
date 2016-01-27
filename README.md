@@ -8,9 +8,14 @@ WP-Editcount-Module
 
 Wikipedia FR Lua module that handles the current edit count of users
 
-*TODO: Write documentation/readme*
+## Documentation
+Simple lua module that is used by the script "[WP-EditCount-Bot](https://github.com/ValentinBrclz/WP-EditCount-Bot)" to update the editcount of users.
 
-## License and credits
-* License: GNU General Public Licence (2.0)
+The bot updates *Module:Compteur d'éditions automatique/data* and the script *Module:Compteur d'éditions automatique* gets the correct values from the data and passes it to the *Modèle:Compteur d'éditions automatique*'.
+
+## Licenses and credits
+* Licenses:
+ * Github: GNU General Public Licence (2.0)
+ * Wikipedia: CC-BY-SA 3.0 and GFDL
 * Author: [Valentin Berclaz](http://www.valentinbeclaz.com/) ([GitHub Profile](https://github.com/ValentinBrclz))
 * Collaborator: [0x010C](https://github.com/0x010C)
