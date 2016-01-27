@@ -8,13 +8,13 @@
 local p = {}
 
 -- Get data in fromatnum format
-local function getFormattedData(frame, format, data)
+local function getFormattedData(format, data)
     -- If the user want the raw data
     if format ~= nil then
         return data
     end
     -- Otherwise format the number according to his settings
-    return frame:preprocess("{{formatnum:" .. data .. "}}")
+    return mw.language.new('fr'):formatNum(data)
 end
 
 function p.getEditCount(frame)
@@ -26,9 +26,9 @@ function p.getEditCount(frame)
     local args = frame:getParent().args
     -- If there is a value for the given user (args elseif via title), return it
     if data[args[1]] ~= nil then
-        return getFormattedData(frame, args['raw'], data[args[1]])
+        return getFormattedData(args['raw'], data[args[1]])
     elseif data[rtitle] ~= nil then
-        return getFormattedData(frame, args['raw'], data[rtitle])
+        return getFormattedData(args['raw'], data[rtitle])
     end
     -- Elsewise just display a "?" until the bot get through it
     return "?"
