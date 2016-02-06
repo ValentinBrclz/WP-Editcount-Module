@@ -13,7 +13,7 @@ local function getFormattedData(format, data)
     if format ~= nil then
         return data
     end
-    -- Otherwise format the number according to his settings
+    -- Otherwise format the number
     return mw.language.new('fr'):formatNum(data)
 end
 
