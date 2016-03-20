@@ -1,6 +1,6 @@
 {
   "name": "wp-editcount-module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Wikipedia FR Lua module that handles the current edit count of users",
   "author": "Valentin Berclaz",
   "license": "GPL-2.0",
