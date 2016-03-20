@@ -2,12 +2,12 @@
 -- WP-Editcount-Module
 --
 -- Wikipedia FR Lua module that handles the current edit count of users
--- Copyright (C) 2016 - GFLv2 or CC-BY-SA 3.0 or GFDL
+-- Copyright (C) 2016 - GPLv2 or CC-BY-SA 3.0 or GFDL
 -- <https://fr.wikipedia.org/w/index.php?title=Module:Compteur_d%27%C3%A9ditions_automatique&action=history>
 --
 local p = {}
 
--- Get data in fromatnum format
+-- Get data in formatnum format
 local function getFormattedData(format, data)
     -- If the user want the raw data
     if format ~= nil then
